@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'Netflix',
-  description: 'Netflix',
+  title: 'Netflix Clone',
+  description: 'Watch TV Shows Online, Watch Movies Online',
+  icons: {
+    icon: '/netflix-icon.svg'
+  }
 }
 
 export default function RootLayout({
@@ -16,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
